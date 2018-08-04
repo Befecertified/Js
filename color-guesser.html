@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Guess the Color</title>
+        <style>
+            .square {
+                width: 30%;
+                background: #232323;
+                padding-top: 150px;
+                margin: 1.66%;
+                float: left;
+                cursor: pointer;
+                border-radius: 12%;
+                transition: all 0.5s;
+            }
+            #container {
+                max-width: 600px;
+                margin: 20px auto;
+            }
+            body {
+                background: #232323;
+                color: cornsilk;
+                text-align: center;
+                margin: 0;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            #menu {
+                background: cornsilk;
+                height: 30px;
+                color: black;
+            }
+            .selected {
+                background: cadetblue; 
+                color: white;
+            }
+            .hide {
+                display: none;
+            }
+            h1 {
+                background: dodgerblue;
+                margin: 0;
+                text-transform: uppercase;
+                line-height: 200%;
+                font-weight: normal;
+                letter-spacing: 1.5px;
+                padding: 20px 0;
+            }
+            #rgb {
+                font-size: 200%;
+            }
+            button {
+                border: none;
+                background: none;
+                height: 100%;
+                text-transform: uppercase;
+                font-family: inherit;
+                color: cadetblue;
+                font-weight: bold;
+                letter-spacing: 1.2px;
+                transition: all 0.3s;
+                font-size: inherit;
+                outline: none;
+            }
+            button:hover {
+                color: cornsilk;
+                background: cadetblue;
+            }
+            #feedback {
+                color: cadetblue;
+                font-weight: bold;
+                letter-spacing: 1px;
+                display: inline-block;
+                width: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>
+                The Great 
+                <br>
+                <span id='rgb'>RGB</span>
+                <br>
+                Game
+            </h1>
+            <article id='menu'>
+                <button id="reset">
+                    New colors
+                </button>
+                <span id='feedback'></span>
+                <button class='level'>Easy</button>
+                <button class="level selected">Hard</button>
+            </article>
+        </section>
+        <main id="container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </main>
+
+        <script src="color-guesser.js"></script>
+    </body>
+</html>
